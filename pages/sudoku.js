@@ -1,3 +1,4 @@
+
 import React from 'react';
 // import SudokuBoard from '../components/SudokuBoard';
 import sudoku from '../components/sudoku';
@@ -5,8 +6,15 @@ import dynamic from 'next/dynamic'
 import styles from '../styles/Sudoku.module.css';
 import { useState, useEffect } from "react";
 
-const SudokuBoard = dynamic(() => import('../components/SudokuBoard'), { ssr: false })
+import pg from 'pg';
+const { Pool } = require('pg')
+require('dotenv').config()
 
+const pool = new Pool({
+  connectionString: "postgres://default:mp6SkYVC2MGv@ep-lively-leaf-12069118-pooler.us-east-1.postgres.vercel-storage.com:5432/verceldb?sslmode=require",
+})
+
+const SudokuBoard = dynamic(() => import('../components/SudokuBoard'), { ssr: false })
 export default function Sudoku() {
     const str = sudoku.generate('easy');
     const [grid, setGrid] = useState(sudoku.board_string_to_grid(str));
