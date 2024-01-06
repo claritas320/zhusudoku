@@ -9,6 +9,7 @@
     "next": "latest",
     "react": "18.2.0",
     "react-dom": "18.2.0"
+    "pg": "^8.7.1"
   },
   "engines": {
     "node": ">=18"
