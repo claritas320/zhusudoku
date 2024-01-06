@@ -6,12 +6,24 @@
     "start": "next start"
   },
   "dependencies": {
-    "next": "latest",
+    "@vercel/postgres": "^0.5.1",
+    "nexe": "^4.0.0-rc.4",
+    "next": "^14.0.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "pg": "^8.7.1"
   },
   "engines": {
     "node": ">=18"
+  },
+  "name": "zhusudoku",
+  "description": "This is a starter template for [Learn Next.js](https://nextjs.org/learn).",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/react": "18.2.46",
+    "typescript": "5.3.3"
   }
 }

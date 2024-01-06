@@ -6,7 +6,9 @@ import dynamic from 'next/dynamic'
 import styles from '../styles/Sudoku.module.css';
 import { useState, useEffect } from "react";
 
-import { Pool } from 'pg';
+
+const { Pool } = require('pg')
+require('dotenv').config()
 
 const pool = new Pool({
   connectionString: "postgres://default:mp6SkYVC2MGv@ep-lively-leaf-12069118-pooler.us-east-1.postgres.vercel-storage.com:5432/verceldb?sslmode=require",
