@@ -6,7 +6,7 @@ import dynamic from 'next/dynamic'
 import styles from '../styles/Sudoku.module.css';
 import { useState, useEffect } from "react";
 
-import pg from 'pg';
+
 const { Pool } = require('pg')
 require('dotenv').config()
 
