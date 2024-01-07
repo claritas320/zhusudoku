@@ -7,7 +7,7 @@ import styles from '../styles/Sudoku.module.css';
 import { useState, useEffect } from "react";
 import { saveGridToDatabase } from './db';
 import { insertData } from './add-puzzel';
-
+import SelectGame from './SelectGame';
 
 
 const SudokuBoard = dynamic(() => import('../components/SudokuBoard'), { ssr: false })
@@ -34,9 +34,7 @@ export default function Sudoku() {
     function checkLastStep(){
     }
 
-    function SelectGame(){
-        
-    }
+
 
     useEffect(() => {
         const handleKeyDown = (event) => {
@@ -78,7 +76,7 @@ export default function Sudoku() {
                 <button onClick={() => newGame()}>New Game</button>
                 <button onClick={() => checkResult()}>Check</button>
                 <button onClick={() => checkLastStep()}>LastStep</button>
-                <button onClick={() => SelectGame()}>ExistingGame</button>
+                <SelectGame />
             </div>
         </div>
     );
