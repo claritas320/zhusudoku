@@ -1,9 +1,6 @@
 import { sql } from '@vercel/postgres';
 import { NextApiResponse, NextApiRequest } from 'next';
-declare const grid: any;
 
-// 在 TypeScript 中使用 grid 变量
-console.log(grid);
  
 export default async function handler(
   request: NextApiRequest,
