@@ -6,7 +6,7 @@ import dynamic from 'next/dynamic'
 import styles from '../styles/Sudoku.module.css';
 import { useState, useEffect } from "react";
 import { saveGridToDatabase } from './db';
-import {insertData} from './add-puzzel';
+import { insertData } from './add-puzzel';
 
 
 
