@@ -5,7 +5,7 @@ import sudoku from '../components/sudoku';
 import dynamic from 'next/dynamic'
 import styles from '../styles/Sudoku.module.css';
 import { useState, useEffect } from "react";
-import { saveGridToDatabase } from 'db';
+import { saveGridToDatabase } from './db';
 
 
 
