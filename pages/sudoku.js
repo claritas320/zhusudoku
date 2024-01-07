@@ -34,6 +34,10 @@ export default function Sudoku() {
     function checkLastStep(){
     }
 
+    function SelectGame(){
+        
+    }
+
     useEffect(() => {
         const handleKeyDown = (event) => {
             console.log('Key pressed:', event.key);
@@ -74,6 +78,7 @@ export default function Sudoku() {
                 <button onClick={() => newGame()}>New Game</button>
                 <button onClick={() => checkResult()}>Check</button>
                 <button onClick={() => checkLastStep()}>LastStep</button>
+                <button onClick={() => SelectGame()}>ExistingGame</button>
             </div>
         </div>
     );
