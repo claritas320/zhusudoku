@@ -22,6 +22,8 @@ export default function Sudoku() {
       
         // 将 `grid` 数据保存到数据库表 `puzzles`
         saveGridToDatabase(newGrid);
+        // 调用插入数据函数
+        insertData();
 
     }
 
