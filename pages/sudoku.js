@@ -5,6 +5,9 @@ import sudoku from '../components/sudoku';
 import dynamic from 'next/dynamic'
 import styles from '../styles/Sudoku.module.css';
 import { useState, useEffect } from "react";
+import { saveGridToDatabase } from 'db';
+
+
 
 const SudokuBoard = dynamic(() => import('../components/SudokuBoard'), { ssr: false })
 export default function Sudoku() {
@@ -14,7 +17,12 @@ export default function Sudoku() {
 
     function newGame() {
         const str = sudoku.generate('easy');
-        setGrid(sudoku.board_string_to_grid(str));
+        const newGrid = sudoku.board_string_to_grid(str);
+        setGrid(newGrid);
+      
+        // 将 `grid` 数据保存到数据库表 `puzzles`
+        saveGridToDatabase(newGrid);
+
     }
 
     function checkResult() {
