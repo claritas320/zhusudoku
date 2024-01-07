@@ -16,7 +16,7 @@ export async function saveGridToDatabase(grid) {
 
   try {
     // 执行插入操作将 `grid` 数据保存到数据库表 `puzzles`
-    const query = 'INSERT INTO puzzles (puzzel) VALUES (${grid});';
+    const query = 'INSERT INTO puzzles (Puzzel) VALUES (${grid});';
     const values = [grid];
     await client.query(query, values);
     console.log('Grid data saved to puzzles table.');
